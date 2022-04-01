@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hair genuine</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="Description" content="genuineは、福岡市中央区大名にあるお客様のニーズ・コンディションに合わせたサービスをベースとして、ホスピタリティを大切にしているのサロン・美容室・ネイルサロンです。">
+<meta name="Keywords" content="genuine,ジェニュイン,杉谷美和,大名,美容室,">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/vegas.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/vegas.js"></script>
+<script>
+$(function() {
+    $('body').vegas({
+        slides: [
+        { src: 'img/top-img01.jpg' },
+        { src: 'img/top-img02.jpg' },
+        { src: 'img/top-img03.jpg' }
+        ],
+        delay: 5000, //スライドまでの時間ををミリ秒単位で設定
+        timer: true, //タイマーバーの表示/非表示を切り替え
+        overlay: 'img/top-overlay02.png', //オーバーレイする画像の設定
+        animation: 'random', //スライドのアニメーションを設定
+        transition: 'blur', //スライド間のエフェクトを設定
+        transitionDuration: 1000 //エフェクト時間をミリ秒単位で設定
+    });
+});
+</script>
+<link rel="stylesheet" type="text/css" href="css/layerBoard.css" media="all" />
+<script src="js/jquery.cookie.js"></script>
+<script src="js/jquery.layerBoard.js"></script>
+<script>
+$(function(){
+ 
+	$('#layer_board_area').layerBoard({alpha:0.8});
+ 
+ $('#layer_board_area').layerBoard({
+	limitMin : 0
+});
+ 
+})
+
+</script>
+</head>
+
+<body>
+    
+
+    
+    <article id="header">
+        <div id="nav-drawer">
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <div id="nav-content">
+                <ul>
+                    <a href="index.html"><li><img src="img/logo-gr.png" alt="hair genuine" id="navlogo"></li></a>
+                    <a href="about.html"><li>　about</li></a>
+                    <a href="menu.html"><li>　menu</li></a>
+                    <a href="staff.html"><li>　staff</li></a>
+                    <a href="access.html"><li>　access</li></a>
+                    <a href="reserve.html"><li>　reserve</li></a>
+                    <a href="https://www.instagram.com/hairgenuine/" target="_blank">
+                        <li>　instagram</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </article>
+    
+    <div>
+        <img src="img/logo-wh.png" alt="hair genuine" id="toplogo">
+    </div>
+    <div id="pcmenu">
+        <ul>
+            <a href="about.html"><li id="leftest">about</li></a>
+            <a href="menu.html"><li>menu</li></a>
+            <a href="staff.html"><li>staff</li></a>
+            <a href="access.html"><li>access</li></a>
+            <a href="reserve.html"><li>reserve</li></a>
+            <a href="https://www.instagram.com/hairgenuine/" target="_blank">
+                <li>instagram</li>
+            </a>
+        </ul>
+    </div>
+     <div>
+        <a href="https://www.instagram.com/hairgenuine/" target="_blank">
+            <img src="img/insta.png" alt="instagram hair genuine" id="topinsta">
+        </a>
+    </div>
+    <article id="footer">
+        <p id="copyrights">© 2018 genuine All Rights Reserved.</p>
+    </article>
+</body>
+</html>

@@ -1,0 +1,501 @@
+@charset "utf-8";
+body {
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #000;
+}
+a:hover {
+    color: #000;
+}
+a:active {
+    color: #000;
+}
+a:visited {
+    color: #000;
+}
+/* ------ ハンバーガーメニュー ------ */
+#header {
+  padding:15px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    background-image: url(../img/logo-gr.png);
+    background-size: 120px; 
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#pc-header {
+    display: none;
+}
+#nav-drawer {
+  position: relative;
+}
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #000;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 170px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+#nav-content {
+    padding-left: 30px;
+    font-size: 1em;
+    padding-top: 2.5em
+}
+#nav-content #navlogo {
+    width: 140px;
+    height: auto;
+}
+#nav-content ul li {
+    margin-bottom: 2.5em;
+}
+/* ------ メイン ------ */
+.overflow {
+    overflow: hidden;
+}
+.ph100 {
+    width: 100%;
+    margin: 0;
+}
+.ph100-acc {
+    width: 100%;
+    margin: 0;
+}
+.ph90 {
+    width: 90%;
+    margin: 0 5%;
+    float: left;
+}
+.ph90-2 {
+    width: 90%;
+    margin: 0 5%;
+    float: left;
+}
+.ph90-2-cnt {
+    width: 44%;
+    margin-right: 2%;
+    margin-left: 5%;
+    float: left;
+    margin-top: 0.3em;
+}
+.ph90-2-right {
+    width: 44%;
+    margin-right: 5%;
+    margin-top: 0.3em;
+}
+.ph80 {
+    width: 80%;
+    margin: 0 10%;
+    float: left;
+}
+.ph70 {
+    width: 70%;
+    margin: 0 15%;
+    float: left;
+}
+.ph70-res {
+    width: 70%;
+    margin: 0 15%;
+    float: left;
+}
+.ph50 {
+    width: 50%;
+    margin: 0 25%;
+    float: left;
+}
+.ph50-staff {
+    width: 50%;
+    margin: 0 25%;
+    float: left;
+}
+.ph44l {
+    width: 44%;
+    margin-right: 2%;
+    margin-left: 5%;
+    float: left;
+    margin-top: 0.3em;
+}
+.ph44r {
+    width: 44%;
+    margin-right: 5%;
+    margin-top: 0.3em;
+}
+.ph44l-2 {
+    width: 44%;
+    margin-right: 2%;
+    margin-left: 5%;
+    float: left;
+    margin-top: 0.3em;
+}
+.ph44r-2 {
+    width: 44%;
+    margin-right: 5%;
+    margin-top: 0.3em;
+}
+.ph44l-3 {
+    width: 44%;
+    margin-right: 2%;
+    margin-left: 5%;
+    float: left;
+    margin-top: 0.3em;
+}
+.ph44r-3 {
+    width: 44%;
+    margin-right: 5%;
+    margin-top: 0.3em;
+}
+.txtarea {
+    margin: 0 5%;
+}
+.txtarea-price {
+    margin: 0 5%;
+}
+.subhead {
+    font-size: 1.2em;
+    letter-spacing: 0.25em;
+    margin: 1.1em 0 0.3em;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.subhead-mini {
+    font-size: 1em;
+    letter-spacing: 0.25em;
+    margin: 1.1em 0 -1em;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.bodycopy {
+    font-size: 0.8em;
+    line-height: 3.2em;
+    margin-bottom: 4em;
+}
+.bodycopy-staff {
+    font-size: 0.8em;
+    line-height: 3.2em;
+    margin-bottom: 4em;
+    text-align: center;
+}
+.lineh-h {
+    line-height: 1.5em;
+}
+.t-outline {
+    border-top: 1px solid #eee;
+    width: 96%;
+    margin: 0 2%;
+}
+.t-menu {
+    border-bottom: 1px solid #eee;
+    padding-left: 1em;
+}
+.t-price {
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding-right: 1em;
+}
+.t-title {
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    line-height: 4em
+}
+.cautiontxt {
+    font-size: 0.7em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: -1em 0 1em;
+}
+.txt-cnt {
+    width: 100%;
+    text-align: center;
+}
+.acc-title {
+    width: 100%;
+    text-align: center;
+    margin: 1.5em 0 0.7em;
+}
+.acc-logo {
+    width: 120px;
+}
+.day {
+    width: 100px;
+    text-align: right;
+    padding-right: 20px
+}
+.time {
+    width: 200px;
+    text-align: left;
+}
+#daytime {
+    width: 320px;
+    margin: 0 auto;
+}
+.boldtxt{
+    font-weight: 600;
+}
+.res-copy {
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 2em;
+}
+.mgn-b {
+    margin-bottom: 4em;
+}
+.pcbr {
+    display: none;
+}
+.pc__txt {
+    display: none;
+}
+.pc-none {
+    display: block;
+}
+.spbr {
+    display: block;
+}
+.spspace {
+    display: inline;
+}
+.sp__txt {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1em;
+    margin: 0em 0 1em -0.5em;
+}
+#tellogo {
+    width: 120px;
+}
+#staff_all {
+    width: 96%;
+    margin: 0 2% 100px;
+    text-align: center;
+}
+#staff_all img {
+    width: 100%;
+}
+/* ------ フッター　------ */
+#footer {
+    margin-top: 7em;
+    margin-bottom: 0.5em;
+    font-size: 0.5em;
+    text-align: center;
+    width: 100%;
+}
+#instaicon {
+    width: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+/* ------ PC用 ------ */
+
+@media screen and (min-width: 700px) {
+    #wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1%;
+    }
+    #header {
+        display: none;
+    }
+    #pc-header {
+        display: block;
+    }
+    #pc-header #pclogo {
+        width: 170px;
+        margin: 4em 0 0.5em;
+    }
+    #pc-header #pc-menu {
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    #pc-header #pc-menu ul li {
+        display: inline;
+        margin-left: 4.5em;
+        font-size: 0.9em;
+        letter-spacing: 0.15em;
+    }
+    #pc-header #pc-menu #leftest {
+        margin-left: 0em;
+    }
+    .ph100-acc {
+        width: 60%;
+        margin: 0 20%;
+    }
+    .ph90 {
+        width: 70%;
+        margin: 0;
+    }
+    .ph90-2 {
+        width: 32%;
+        margin: 0;
+    }
+    .ph90-2-cnt {
+        display: inline;
+        width: 32%;
+        margin: 0 2%;
+        float: left;
+    }
+    .ph90-2-right {
+        display: inline;
+        width: 32%;
+        margin: 0;
+        float: left;
+    }
+    .ph44l {
+        width: 28%;
+        margin-right: 0;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+    .ph44r {
+        width: 28%;
+        margin-right: 0;
+        margin-left: 2%;
+        margin-top: 1em;
+    }
+    .ph44l-2 {
+        display: inline;
+        width: 32%;
+        margin: 0 2%;
+        float: left;
+    }
+    .ph44r-2 {
+        display: inline;
+        width: 32%;
+        margin: 0;
+        float: left;
+    }
+    .ph44l-3 {
+        display: inline;
+        width: 32%;
+        margin: 0;
+        float: left;
+    }
+    .ph44r-3 {
+        display: inline;
+        width: 32%;
+        margin: 0 2%;
+        float: left;
+    }
+    .txtarea {
+    margin: 3em 5% 5em;
+    }
+    .txtarea-price {
+    margin: 3em 12% 5em;
+    }
+    .subhead {
+        font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.4em;
+    }
+    .bodycopy-staff {
+        text-align: center;
+    }
+    .ph50-staff {
+        width: 20%;
+        margin: 0 40%;
+    }
+    .res-copy {
+        text-align: center;
+    }
+    .ph70-res {
+        width: 30%;
+        margin: 0 35%;
+    }
+    .pcbr {
+        display: block;
+    }
+     .pc__txt {
+        display: inline;
+    }
+    .pc-none {
+        display: none;
+    }
+    .spbr {
+        display: none;
+    }
+    .spspace {
+        display: none;
+    }
+    #instaicon {
+        width: 60px;
+        position: relative;
+        bottom: auto;
+        right: auto;
+    }
+    #insta_box {
+        width: 100%;
+        text-align: center;
+        margin-top: 120px;
+    }
+    #staff_all {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    #staff_all img {
+        width: 750px;
+    }
+}	/* ------ 締め ------ */
